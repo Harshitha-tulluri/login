@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css"/>
+</head>
+<body>
+    <center>
+      <div class="first">
+        <h1>LOGIN</h1>
+        <br>
+        <br>
+        <input type="text" placeholder="phone,email or username" name="id" id="id"/><br><br>
+        <input type="text" placeholder="password" name="pass" id="pass"/><br><br>
+        <button onclick="return check()">login</button>
+        
+      </div>
+    </center>
+    <script>
+        function check(){
+            var naam=document.getElementById("id").value;
+            var password=document.getElementById("pass").value;
+            if(naam==null || naam=="")
+            {
+                alert("name cant be empty");
+                return false;
+            }
+            else if(password.length<6)
+            {
+                alert("enter valid password");
+                return false;
+            }
+            alert("login successfull");
+            return true;
+            
+        }
+
+    </script>
+</body>
+</html>
